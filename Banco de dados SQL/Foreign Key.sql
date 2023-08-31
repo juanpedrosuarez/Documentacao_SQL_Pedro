@@ -38,7 +38,21 @@ No exemplo acima, a coluna "cliente_id" na tabela "Pedidos" é a chave estrangei
 "id" na tabela "Clientes". Isso estabelece um vínculo entre as duas tabelas, garantindo que os pedidos estejam
 sempre associados a clientes existentes na tabela "Clientes".
 
+Suponha que você já tenha duas tabelas: "clientes" e "vendedores", e deseje adicionar uma chave estrangeira à tabela
+"clientes" que referencia a coluna "cliente_ID" na tabela "vendedores".
+ALTER TABLE clientes
+ADD FOREIGN KEY (cliente_ID) REFERENCES vendedores(cliente_ID);
+
+ALTER TABLE clientes: Esta parte do comando indica que você está fazendo uma alteração na estrutura da tabela "clientes".
+
+ADD FOREIGN KEY (cliente_ID): Esta é a declaração para adicionar uma nova chave estrangeira à tabela "clientes". A coluna
+"cliente_ID" é a coluna na tabela "clientes" que será a chave estrangeira.
+
+REFERENCES vendedores(cliente_ID): Isso especifica a tabela de referência e a coluna de referência. A chave estrangeira na 
+coluna "cliente_ID" na tabela "clientes" está sendo associada à coluna "cliente_ID" na tabela "vendedores".
 
 
+Para eliminar uma FOREIGN KEY, use o seguinte SQL:
 
-
+ALTER TABLE vendedores
+DROP FOREIGN KEY FK_vendedores;
