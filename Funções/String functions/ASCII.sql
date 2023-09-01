@@ -1,1 +1,3 @@
-
+Retorna o valor ASCII do primeiro caractere em "NOMEDOCLIENTE":
+SELECT ASCII(NOMEDOCLIENTE) AS FIRSTCHAR
+FROM CLIENTES;
