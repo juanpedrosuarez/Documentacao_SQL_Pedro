@@ -1,0 +1,2 @@
+Retorna um número decimal aleatório (sem valor inicial - portanto, retorna um número completamente aleatório >= 0 e <1):]
+SELECT RAND();
